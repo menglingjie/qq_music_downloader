@@ -156,12 +156,12 @@ def search(page_num, page_size, song_name):
 
 
 def parse_song(link):
-    songmid = qq_re.search(link)[1]
+    songmid = qq_re.search(link).group(0)
     return songmid
 
 
 def parse_playlist(link):
-    playlist_id = qq_re.search(link)[1]
+    playlist_id = qq_re.search(link).group(0)
     return playlist_id
 
 
